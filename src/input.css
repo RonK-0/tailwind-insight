@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[90rem] p-6 w-full mx-auto;
+}
+
+@layer base {
+    /* @font-face {
+      font-family: 'SoDoSans Bold';
+      font-weight: 700;
+      src: url("../dist/fonts/SoDoSans-Bold.woff2") format('woff2');
+    } */
+  }
+
+@layer components{
+    body.open{
+        @apply overflow-hidden;
+    }
+
+    
+
+}
+
+@layer utilities{
+    .btn{
+        @apply inline-block p-[0.3rem] px-[1rem] rounded-full border-transparent border-[1px] text-sm font-medium
+        hover:scale-[1.1];
+    }
+    .btn.bg--dark{
+        @apply bg-dark text-light;
+    }
+    .btn.bg--accent{
+        @apply bg-accent text-light;
+    }
+    .btn.bg--light{
+        @apply bg-light text-dark border-[1px] border-dark;
+    }
+    .btn.bg--transparent-no-border{
+        @apply bg-transparent text-dark;
+    }
+    .btn.bg--transparent{
+        @apply bg-transparent text-dark border-[1px] border-dark;
+    }
+    .btn.bg--transparent-alt{
+        @apply bg-transparent text-light border-[1px] border-light;
+    }
+}
