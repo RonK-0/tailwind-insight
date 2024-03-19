@@ -2,7 +2,7 @@
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
-  "name": "tailwind-stabacks",
+  "name": "tailwind-insight",
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "dependencies": {
