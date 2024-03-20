@@ -21,7 +21,7 @@
     }
     .header.scroll{
         @apply fixed w-full lg:static
-        bg-dark md:bg-transparent z-[999]
+        bg-dark lg:bg-transparent z-[999]
         transition-all duration-500;
     }
     .header .container{
@@ -64,7 +64,7 @@
     .header__action{
         @apply bg-dark
         w-0 h-[100vh] px-0 pt-0 
-        absolute top-0 right-0
+        absolute top-0 right-0 z-[999] 
         overflow-hidden transition-all
         lg:static lg:h-fit lg:w-fit;
     }
@@ -119,7 +119,7 @@
         
     .burger__menu{
         @apply flex flex-col items-end
-        lg:hidden;
+        z-[999] lg:hidden;
     }
     .burger__menu span{
         @apply w-[1.5rem] h-[0.3rem] bg-light

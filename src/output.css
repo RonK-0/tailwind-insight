@@ -602,15 +602,10 @@ body.open {
   transition-duration: 500ms;
 }
 
-@media (min-width: 768px) {
-  .header.scroll {
-    background-color: transparent;
-  }
-}
-
 @media (min-width: 1024px) {
   .header.scroll {
     position: static;
+    background-color: transparent;
   }
 }
 
@@ -729,6 +724,7 @@ body.open {
   position: absolute;
   top: 0px;
   right: 0px;
+  z-index: 999;
   height: 100vh;
   width: 0px;
   overflow: hidden;
@@ -884,6 +880,7 @@ body.open {
 }
 
 .burger__menu {
+  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -1361,10 +1358,6 @@ body.open {
 
 .mb-12 {
   margin-bottom: 3rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .flex {
