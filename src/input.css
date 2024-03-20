@@ -201,16 +201,11 @@
         @apply bg-transparent text-accent 
         border-t-accent border-t-[1px]
         w-full flex-grow rounded-none
-        transition-none;
+        transition-none
     }
     .services__card:hover button{
         @apply bg-accent text-light 
-        /* w-[26.8rem]  */
-        /* bad solution only for desktops */
-
-        /* w-[110%] md:w-[125%] lg:w-[122%] xl:w-[117%] */
-        /* bad solution does not scale properly */
-        w-full
+        w-[calc(100%+4rem)];
     }
 
     /* START OF PROJECTS */

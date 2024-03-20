@@ -1098,7 +1098,7 @@ body.open {
 }
 
 .services__card:hover button {
-  width: 100%;
+  width: calc(100% + 4rem);
   --tw-bg-opacity: 1;
   background-color: rgb(251 77 60 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
