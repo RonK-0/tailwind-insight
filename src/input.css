@@ -183,7 +183,7 @@
         justify-center items-center
         shadow-2xl rounded-2xl border-2
         transition-all duration-200
-        hover:scale-[1.05];
+        hover:scale-[1.05] md:hover:scale-[1.1];
     }
     .services__card h3{
         @apply text-4xl font-bold pt-6;
@@ -197,16 +197,18 @@
     .services__card li{
         @apply py-2 text-lg;
     }
+    .services__card:hover button{
+        @apply bg-accent text-light 
+        w-[calc(100%+4rem)];
+    }
     .services__card button{
         @apply bg-transparent text-accent 
         border-t-accent border-t-[1px]
         w-full flex-grow rounded-none
         transition-none
+        hover:bg-dark
     }
-    .services__card:hover button{
-        @apply bg-accent text-light 
-        w-[calc(100%+4rem)];
-    }
+    
 
     /* START OF PROJECTS */
     .project__card{

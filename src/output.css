@@ -1040,6 +1040,14 @@ body.open {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (min-width: 768px) {
+  .services__card:hover {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 .services__card h3 {
   padding-top: 1.5rem;
   font-size: 2.25rem;
@@ -1066,6 +1074,14 @@ body.open {
   line-height: 1.75rem;
 }
 
+.services__card:hover button {
+  width: calc(100% + 4rem);
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 77 60 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .services__card button {
   width: 100%;
   flex-grow: 1;
@@ -1079,12 +1095,9 @@ body.open {
   transition-property: none;
 }
 
-.services__card:hover button {
-  width: calc(100% + 4rem);
+.services__card button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(251 77 60 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(43 43 43 / var(--tw-bg-opacity));
 }
 
 /* START OF PROJECTS */
