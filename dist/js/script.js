@@ -1,3 +1,9 @@
+window.onscroll = function() {
+    var nav = document.getElementById('navd');
+    if ( window.pageYOffset > 50 ) { nav.classList.add("scroll"); }
+    else { nav.classList.remove("scroll"); }
+}
+
 const burgir = document.querySelector(".burger__menu");
 const headerA = document.querySelector(".header__action");
 const bodih = document.querySelector("body");
@@ -30,3 +36,4 @@ burgir.addEventListener("click", ()=>{
 //     activeContent.classList.add("active");
 //   });
 // });
+

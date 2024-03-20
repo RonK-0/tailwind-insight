@@ -7,19 +7,119 @@
 }
 
 @layer base {
-    /* @font-face {
-      font-family: 'SoDoSans Bold';
-      font-weight: 700;
-      src: url("../dist/fonts/SoDoSans-Bold.woff2") format('woff2');
-    } */
   }
 
 @layer components{
-    body.open{
+    body.open{  
         @apply overflow-hidden;
+        /* disable scroll on nav mobile open */
+    }
+    
+    .header{
+        @apply bg-dark md:bg-transparent;
+    }
+    .header__wrapper{
+        @apply flex items-center justify-between
+        md:block md:h-16 md:mx-auto;
+    }
+    
+    .branding{
+        @apply items-center gap-12
+        md:flex md:justify-between
+        md:max-w-[87.5rem] md:w-full
+        md:py-4 md:px-2
+        md:bg-transparent
+        md:left-1/2 md:-translate-x-1/2;
+    }
+    .branding.scroll{
+        @apply md:bg-dark
+        md:fixed md:rounded-lg
+        transition-all duration-500;
+    }
+    .branding img{
+        @apply w-[5rem];
+    }
+    .branding .header__navd{
+        @apply hidden
+        md:flex md:gap-4;
+    }
+    .branding .header__navd li{
+        @apply font-medium text-base text-light 
+        py-3 px-2
+        hover:text-accent hover:bg-light;
+    }
+    
+    .header__action{
+        @apply bg-dark
+        w-0 h-[100vh] px-0 pt-0 
+        absolute top-0 right-0
+        overflow-hidden transition-all
+        md:static md:h-fit md:w-fit;
+    }
+    .header__action.open{
+        @apply w-full h-[100vh] px-10 pt-10
+        overflow-hidden
+        flex flex-col gap-16
+        justify-center items-center
+        transition-all duration-300;
+    }
+    .header__action .header__navm{
+        @apply pb-5 h-fit
+        flex flex-col gap-4
+        justify-center items-center
+        md:hidden;
+    }
+    .header__navm li{
+        @apply w-[16rem] h-16 py-2 px-12
+        text-light font-bold text-3xl
+        flex justify-center items-center
+        hover:text-accent hover:bg-light;
     }
 
-    
+    .header__action .header__btn{
+        @apply pt-5 flex flex-col gap-3 
+        md:flex-row-reverse;
+    }
+    .header__action .header__btn a{
+        @apply flex gap-[1rem] items-center 
+        hover:text-accent;
+    }
+    .header__action .header__kamote{
+        @apply flex gap-5;
+    }
+        
+
+    .burger__menu{
+        @apply flex flex-col items-end
+        md:hidden;
+    }
+    .burger__menu span{
+        @apply w-[1.5rem] h-[0.3rem] bg-light
+        block rounded-full
+        transition-all duration-500;
+    }
+    .burger__menu span:nth-child(2){
+        @apply w-[1.25rem] my-1;
+    }
+    .burger__menu span:nth-child(3){
+        @apply w-[1rem];
+    }
+    .burger__menu.open span{
+        @apply w-[1.5rem] 
+        transition-all duration-500;
+    }
+    .burger__menu.open span:first-child{
+        @apply translate-y-[12px] rotate-[225deg]
+        transition-all duration-300;
+    }
+    .burger__menu.open span:nth-child(2){
+        @apply opacity-0 transition-all;
+    }
+    .burger__menu.open span:last-child{
+        @apply translate-y-[-6px] rotate-[-225deg]
+        transition-all duration-300;
+    }
+
 
 }
 
