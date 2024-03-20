@@ -1349,14 +1349,6 @@ body.open {
   order: 2;
 }
 
-.order-1 {
-  order: 1;
-}
-
-.-order-1 {
-  order: -1;
-}
-
 .order-last {
   order: 9999;
 }
@@ -1640,10 +1632,6 @@ body.open {
 }
 
 @media (min-width: 1024px) {
-  .lg\:order-first {
-    order: -9999;
-  }
-
   .lg\:hidden {
     display: none;
   }
