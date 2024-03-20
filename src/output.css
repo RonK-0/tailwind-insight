@@ -644,6 +644,9 @@ body.open {
 .branding {
   align-items: center;
   gap: 3rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 
 @media (min-width: 1024px) {
@@ -1039,6 +1042,8 @@ body.open {
   gap: 2.5rem;
   border-radius: 1rem;
   border-width: 2px;
+  padding-left: 2rem;
+  padding-right: 2rem;
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1051,18 +1056,6 @@ body.open {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.services__card:hover button {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 77 60 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.services__card h3, .services__card p, .services__card ul {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .services__card h3 {
@@ -1101,6 +1094,15 @@ body.open {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(251 77 60 / var(--tw-text-opacity));
+  transition-property: none;
+}
+
+.services__card:hover button {
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 77 60 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* START OF PROJECTS */
@@ -1108,8 +1110,24 @@ body.open {
 .project__card {
   position: relative;
   display: flex;
+  height: 48rem;
   align-items: center;
   justify-content: center;
+}
+
+.project__card:nth-child(1) {
+  background-image: url('../dist/img/projects1.png');
+  background-size: cover;
+}
+
+.project__card:nth-child(2) {
+  background-image: url('../dist/img/projects2.png');
+  background-size: cover;
+}
+
+.project__card:nth-child(3) {
+  background-image: url('../dist/img/projects3.png');
+  background-size: cover;
 }
 
 .project__card::before {
@@ -1139,23 +1157,12 @@ body.open {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.project__card img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .project__card__details {
-  position: absolute;
-  top: 0px;
-  left: 0px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 2rem;
   margin-right: 2rem;
   display: flex;
-  --tw-translate-y: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1172,8 +1179,6 @@ body.open {
   .project__card__details {
     margin-left: 4rem;
     margin-right: 4rem;
-    --tw-translate-y: 80%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 
@@ -1181,24 +1186,18 @@ body.open {
   .project__card__details {
     margin-left: 2rem;
     margin-right: 2rem;
-    --tw-translate-y: 15%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     opacity: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .project__card__details {
-    --tw-translate-y: 45%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     padding: 2rem;
   }
 }
 
 @media (min-width: 1280px) {
   .project__card__details {
-    --tw-translate-y: 40%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     gap: 3rem;
   }
 }
@@ -1213,23 +1212,9 @@ body.open {
 }
 
 .project__card__details h3 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 700;
-}
-
-@media (min-width: 768px) {
-  .project__card__details h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .project__card__details h3 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
 }
 
 .project__card__details p {
@@ -1237,32 +1222,11 @@ body.open {
   line-height: 1.75rem;
 }
 
-@media (min-width: 768px) {
-  .project__card__details p {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .project__card__details p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
 .project__card__details button {
   border-radius: 1rem;
   padding: 1rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-@media (min-width: 768px) {
-  .project__card__details button {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 
 /* START OF CONTACTS */

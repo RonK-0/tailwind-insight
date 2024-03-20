@@ -37,7 +37,8 @@
         lg:flex lg:justify-between
         lg:max-w-[87rem] lg:w-full
         lg:py-4 lg:px-4
-        lg:bg-transparent;
+        lg:bg-transparent
+        transition-all duration-500;
     }
     .branding.scroll{
         @apply lg:bg-dark
@@ -178,16 +179,11 @@
     }
     .services__card{
         @apply flex flex-col gap-10
+        px-8
         justify-center items-center
         shadow-2xl rounded-2xl border-2
         transition-all duration-200
         hover:scale-[1.05];
-    }
-    .services__card:hover button{
-        @apply bg-accent text-light
-    }
-    .services__card h3, .services__card p, .services__card ul{
-        @apply px-8;
     }
     .services__card h3{
         @apply text-4xl font-bold pt-6;
@@ -204,14 +200,34 @@
     .services__card button{
         @apply bg-transparent text-accent 
         border-t-accent border-t-[1px]
-        w-full flex-grow rounded-none;
+        w-full flex-grow rounded-none
+        transition-none;
+    }
+    .services__card:hover button{
+        @apply bg-accent text-light 
+        /* w-[26.8rem]  */
+        /* bad solution only for desktops */
+
+        /* w-[110%] md:w-[125%] lg:w-[122%] xl:w-[117%] */
+        /* bad solution does not scale properly */
+        w-full
     }
 
     /* START OF PROJECTS */
     .project__card{
         @apply relative
         /* h-1/2 md:h-full overflow-clip */
-        flex justify-center items-center;
+        flex justify-center items-center
+        h-[48rem];
+    }
+    .project__card:nth-child(1){
+        @apply bg-[url('../dist/img/projects1.png')] bg-cover
+    }
+    .project__card:nth-child(2){
+        @apply bg-[url('../dist/img/projects2.png')] bg-cover
+    }
+    .project__card:nth-child(3){
+        @apply bg-[url('../dist/img/projects3.png')] bg-cover
     }
     .project__card::before{
         @apply 
@@ -224,9 +240,6 @@
     .project__card:hover::before{
         @apply scale-0;
     }
-    .project__card img{
-        @apply w-full object-cover;
-    }
     .project__card__details{
         @apply my-auto
         bg-black/60
@@ -234,10 +247,6 @@
         opacity-100 md:opacity-0
         flex flex-col gap-6 xl:gap-12
         justify-center items-center
-        absolute top-0 left-0
-        transform translate-y-[50%]
-        sm:translate-y-[80%] md:translate-y-[15%]
-        lg:translate-y-[45%] xl:translate-y-[40%]
         transition-all duration-500
     }
     .project__card:hover .project__card__details{
@@ -247,13 +256,13 @@
         @apply text-light
     }
     .project__card__details h3{
-        @apply font-bold text-3xl md:text-base xl:text-4xl
+        @apply font-bold text-4xl
     }
     .project__card__details p{
-        @apply text-lg md:text-xs xl:text-base
+        @apply text-lg
     }
     .project__card__details button{
-        @apply p-4 text-xl md:text-sm
+        @apply p-4 text-xl
         rounded-2xl
     }
 
