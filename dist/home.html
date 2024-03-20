@@ -9,43 +9,54 @@
     <!-- <script src="https://kit.fontawesome.com/1e4daca392.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-    <header class="header">
+    <!-- section.homeBanner>.container>.homeBanner__wrapper.flex.flex-col.justify-center.items-center.h-[100vh]>h1{Turning Your House<br>Into A Home}+.homeBanner__buttons>button.btn.bg--transparent-alt{See Projects}+button.btn.bg--accent{See Projects} -->
+    <section class="homeBanner">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="branding" id="navd">
+                        <a href="./home.html"><img src="./img/logo.png" alt="Insight Logo"></a>
+                        <ul class="header__navd">
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__action">
+                        <ul class="header__navm">
+                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href="">Contacts</a></li>
+                        </ul>
+                        <ul class="header__navm__socials">
+                            <li class="hover:text-mail"><i class="fas fa-envelope"></i></li>
+                            <li class="hover:text-twitter"><i class="fab fa-twitter"></i></li>
+                            <li class="hover:text-facebook"><i class="fab fa-facebook-f"></i></li>
+                        </ul>
+                        <img src="./img/logo.png" alt="Insight Logo" class="md:hidden">
+                    </div>
+                    <!-- .burger__menu>span*3 -->
+                    <div class="burger__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
         <div class="container">
-            <div class="header__wrapper">
-                <div class="branding" id="navd">
-                    <img src="./img/logo.png" alt="Insight Logo">
-                    <!-- ul.header__navd>li*3>a -->
-                    <ul class="header__navd">
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="header__action">
-                    <!-- ul.header__navm>li*3>a -->
-                    <ul class="header__navm">
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                    <ul class="header__navm__socials flex gap-4 text-light gap-12 md:hidden">
-                        <li><i class="fas fa-envelope hover:text-mail"></i></li>
-                        <li><i class="fab fa-facebook-f hover:text-facebook"></i></li>
-                        <li><i class="fab fa-twitter hover:text-twitter"></i></li>
-                    </ul>
-                    <img src="./img/logo.png" alt="Insight Logo" class="md:hidden">
-                </div>
-                <!-- .burger__menu>span*3 -->
-                <div class="burger__menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="homeBanner__wrapper">
+                <h1>Turning Your House Into A Home</h1>
+                <div class="homeBanner__buttons">
+                    <button class="btn bg--transparent-alt">See Projects</button>
+                    <button class="btn bg--accent">Inquire</button>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
+    
 
 
     

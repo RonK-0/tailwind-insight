@@ -18,6 +18,9 @@
     .header{
         @apply bg-dark md:bg-transparent;
     }
+    .header .container{
+        @apply py-3 md:py-0;
+    }
     .header__wrapper{
         @apply flex items-center justify-between
         md:block md:h-16 md:mx-auto;
@@ -27,24 +30,28 @@
         @apply items-center gap-12
         md:flex md:justify-between
         md:max-w-[87.5rem] md:w-full
-        md:py-4 md:px-2
-        md:bg-transparent
-        md:left-1/2 md:-translate-x-1/2;
+        md:py-4 md:px-4
+        md:bg-transparent;
     }
     .branding.scroll{
         @apply md:bg-dark
         md:fixed md:rounded-lg
+        md:px-4 md:my-6
         transition-all duration-500;
     }
+    .branding.scroll .header__navd{
+        @apply md:mr-0; /*added to correct right side shifting on scroll*/
+    }
     .branding img{
-        @apply w-[5rem];
+        @apply w-[5rem] md:w-[7rem];
     }
     .branding .header__navd{
         @apply hidden
-        md:flex md:gap-4;
+        md:flex md:gap-4
+        md:-mr-2 /*added to correct right side shifting on scroll*/;
     }
     .branding .header__navd li{
-        @apply font-medium text-base text-light 
+        @apply font-semibold text-lg text-light 
         py-3 px-2
         hover:text-accent hover:bg-light;
     }
@@ -71,11 +78,22 @@
     }
     .header__navm li{
         @apply w-[16rem] h-16 py-2 px-12
-        text-light font-bold text-3xl
+        text-light font-bold text-4xl
         flex justify-center items-center
         hover:text-accent hover:bg-light;
     }
-
+    .header__action .header__navm__socials{
+        @apply flex gap-4 text-light
+        justify-center items-center
+        md:hidden;
+    }
+    .header__action .header__navm__socials li{
+        @apply 
+        w-16 h-16 text-3xl
+        flex justify-center items-center
+        hover:bg-light;
+    }
+    
     .header__action .header__btn{
         @apply pt-5 flex flex-col gap-3 
         md:flex-row-reverse;
@@ -88,7 +106,6 @@
         @apply flex gap-5;
     }
         
-
     .burger__menu{
         @apply flex flex-col items-end
         md:hidden;
@@ -120,19 +137,51 @@
         transition-all duration-300;
     }
 
+    .homeBanner{
+        @apply h-[100vh] 
+        bg-bannah bg-cover bg-center;
+    }
+    .homeBanner__wrapper{
+        @apply h-[90vh]
+        flex flex-col gap-10
+        justify-center items-center;
+    }
+    .homeBanner__wrapper h1{
+        @apply text-center text-light
+        text-5xl max-w-[30rem]
+        sm:text-7xl sm:max-w-[45rem]
+        md:text-8xl md:max-w-[55rem];
+    }
+    .homeBanner__buttons{
+        @apply flex flex-col justify-center items-center gap-4
+        w-full md:flex-row md:mx-auto;
+    }
+    .homeBanner__buttons button{
+        @apply w-full md:w-[10rem];
+    }
 
 }
 
 @layer utilities{
     .btn{
-        @apply inline-block p-[0.3rem] px-[1rem] rounded-full border-transparent border-[1px] text-sm font-medium
-        hover:scale-[1.1];
-    }
-    .btn.bg--dark{
-        @apply bg-dark text-light;
+        @apply inline-block
+        p-[1rem] px-[2rem]
+        rounded-full
+        border-transparent border-[1px] 
+        text-base font-medium
+        transition-all;
     }
     .btn.bg--accent{
-        @apply bg-accent text-light;
+        @apply bg-accent text-light
+        hover:bg-light hover:text-accent hover:border-accent;
+    }
+    .btn.bg--transparent-alt{
+        @apply bg-transparent text-light border-[1px] border-light
+        hover:bg-light hover:text-accent hover:border-accent;
+    }
+    
+    .btn.bg--dark{
+        @apply bg-dark text-light;
     }
     .btn.bg--light{
         @apply bg-light text-dark border-[1px] border-dark;
@@ -143,7 +192,5 @@
     .btn.bg--transparent{
         @apply bg-transparent text-dark border-[1px] border-dark;
     }
-    .btn.bg--transparent-alt{
-        @apply bg-transparent text-light border-[1px] border-light;
-    }
+    
 }

@@ -1,6 +1,6 @@
 window.onscroll = function() {
     var nav = document.getElementById('navd');
-    if ( window.pageYOffset > 50 ) { nav.classList.add("scroll"); }
+    if ( window.pageYOffset > 0 ) { nav.classList.add("scroll"); }
     else { nav.classList.remove("scroll"); }
 }
 
