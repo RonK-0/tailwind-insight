@@ -201,7 +201,7 @@
 
     .project__card{
         @apply relative
-        h-1/2 md:h-full 
+        /* h-1/2 md:h-full overflow-clip */
         flex justify-center items-center;
     }
     .project__card::before{
@@ -219,15 +219,16 @@
         @apply w-full object-cover;
     }
     .project__card__details{
-        @apply mx-4 p-4 my-auto
+        @apply my-auto
         bg-black/60
-        md:mx-8 lg:p-8
+        mx-8 sm:mx-16 md:mx-8 p-4 lg:p-8
         opacity-100 md:opacity-0
         flex flex-col gap-6 xl:gap-12
         justify-center items-center
         absolute top-0 left-0
-        transform translate-y-[0%] 
-        md:translate-y-[25%] lg:translate-y-[45%] xl:translate-y-[50%]
+        transform translate-y-[50%]
+        sm:translate-y-[80%] md:translate-y-[15%]
+        lg:translate-y-[45%] xl:translate-y-[40%]
         transition-all duration-500
     }
     .project__card:hover .project__card__details{
@@ -237,14 +238,45 @@
         @apply text-light
     }
     .project__card__details h3{
-        @apply font-bold md:text-base xl:text-4xl
+        @apply font-bold text-3xl md:text-base xl:text-4xl
     }
     .project__card__details p{
-        @apply md:text-xs xl:text-base
+        @apply text-lg md:text-xs xl:text-base
     }
     .project__card__details button{
         @apply p-4 text-xl md:text-sm
         rounded-2xl
+    }
+
+    .contacts{
+        @apply md:h-[800px];
+    }
+    .contacts__form{
+        @apply grid grid-cols-1 gap-2
+        p-12 md:p-14 py-12 bg-light
+        shadow-lg rounded-3xl
+        border-[1px]
+        md:order-first md:max-w-[640px];
+    }
+    .contacts__form input, .contacts__form textarea{
+        @apply outline-none rounded-md
+        border-[1px] border-gray-500
+        px-2 py-4
+    }
+    .contacts__details{
+        @apply flex flex-col gap-10
+        justify-center md:justify-normal
+        md:max-w-[30rem]
+        order-first
+    }
+    .contacts__detail__entry *{
+        @apply text-lg md:text-2xl;
+    }
+    .contacts__detail__entry i{
+        @apply text-accent;
+    }
+    .contacts__form div>button{
+        @apply text-xl px-4
     }
 
     
