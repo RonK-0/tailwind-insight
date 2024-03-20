@@ -18,7 +18,7 @@
         @apply transition-all duration-500
     }
     .header.scroll{
-        @apply fixed w-full
+        @apply fixed w-full lg:static
         bg-dark z-[999] 
         transition-all duration-500;
     }

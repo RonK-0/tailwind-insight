@@ -600,6 +600,12 @@ body.open {
   transition-duration: 500ms;
 }
 
+@media (min-width: 1024px) {
+  .header.scroll {
+    position: static;
+  }
+}
+
 .header .container {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
