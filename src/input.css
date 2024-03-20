@@ -273,6 +273,9 @@
         border-[1px] border-gray-500
         px-2 py-4
     }
+    .contacts__form textarea{
+        @apply resize-none
+    }
     .contacts__details{
         @apply flex flex-col gap-10
         justify-center md:justify-normal

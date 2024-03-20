@@ -1310,6 +1310,10 @@ body.open {
   outline-offset: 2px;
 }
 
+.contacts__form textarea {
+  resize: none;
+}
+
 .contacts__details {
   order: -9999;
   display: flex;
