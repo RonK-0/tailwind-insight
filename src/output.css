@@ -583,9 +583,22 @@ body.open {
   /* disable scroll on nav mobile open */
 }
 
-/* .header{
-        @apply bg-dark md:bg-transparent;
-    } */
+.header {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.header.scroll {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 43 43 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
 
 .header .container {
   padding-top: 0.75rem;
@@ -1352,6 +1365,10 @@ body.open {
   margin-right: auto;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -1396,8 +1413,8 @@ body.open {
   justify-content: center;
 }
 
-.gap-12 {
-  gap: 3rem;
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-3 {
@@ -1406,28 +1423,6 @@ body.open {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-20 {
-  gap: 5rem;
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#959595\] {
@@ -1623,13 +1618,12 @@ body.open {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:justify-normal {
-    justify-content: normal;
+  .md\:items-start {
+    align-items: flex-start;
   }
 
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  .md\:justify-normal {
+    justify-content: normal;
   }
 
   .md\:py-14 {

@@ -14,10 +14,14 @@
         @apply overflow-hidden;
         /* disable scroll on nav mobile open */
     }
-    
-    /* .header{
-        @apply bg-dark md:bg-transparent;
-    } */
+    .header{
+        @apply transition-all duration-500
+    }
+    .header.scroll{
+        @apply fixed w-full
+        bg-dark z-[999] 
+        transition-all duration-500;
+    }
     .header .container{
         @apply py-3 md:py-0;
     }
@@ -25,6 +29,7 @@
         @apply flex items-center justify-between
         lg:block lg:h-16 lg:mx-auto;
     }
+    
     
     .branding{
         @apply items-center gap-12

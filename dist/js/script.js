@@ -1,7 +1,14 @@
 window.onscroll = function() {
-    var nav = document.getElementById('navd');
-    if ( window.scrollY > 0 ) { nav.classList.add("scroll"); }
-    else { nav.classList.remove("scroll"); }
+    var navd = document.getElementById('navd');
+    var navm = document.getElementById('header');
+    if ( window.scrollY > 0 ) {
+        navd.classList.add("scroll");
+        navm.classList.add("scroll");
+    }
+    else {
+        navd.classList.remove("scroll");
+        navm.classList.remove("scroll");
+    }
 }
 
 const burgir = document.querySelector(".burger__menu");
