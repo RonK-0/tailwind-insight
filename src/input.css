@@ -174,7 +174,12 @@
     .services__card{
         @apply flex flex-col gap-10
         justify-center items-center
-        shadow-xl rounded-2xl border-2;
+        shadow-2xl rounded-2xl border-2
+        transition-all duration-200
+        hover:scale-[1.05];
+    }
+    .services__card:hover button{
+        @apply bg-accent text-light
     }
     .services__card h3, .services__card p, .services__card ul{
         @apply px-8;
@@ -192,10 +197,62 @@
         @apply py-2 text-lg;
     }
     .services__card button{
-        @apply w-full flex-grow rounded-none;
+        @apply bg-transparent text-accent 
+        border-t-accent border-t-[1px]
+        
+        w-full flex-grow rounded-none;
     }
 
+    .project__card{
+        @apply relative;
+    }
+    .project__card:before{
+        @apply 
+        w-[100%] h-[100%]
+        absolute top-0 left-0
+        content-['']
+        md:bg-black md:opacity-60
+        z-10
+        transition-all;
+    }
+    .project__card:hover+.project__card:before{
+        @apply opacity-0 h-0 w-0;
+    }
+    .project__card img{
+        @apply w-full object-cover;
+    }
+    .project__card .project__card__details{
+        @apply  mx-8 px-6 py-8
+        /* opacity-0 */
+        flex flex-col gap-12
+        justify-center items-center
+        absolute top-0 left-0
+        transform translate-y-[50%]
+        transition-all duration-200
+    }
+    .project__card .project__card__details:before{
+        @apply w-full h-full
+        absolute top-[50%] left-0
+        content-['']
+        -z-10
+        transform -translate-y-1/2
+        bg-black opacity-60
+    }
+    .project__card:hover .project__card__details{
+        @apply opacity-100;
+    }
+    .project__card__details{
+        @apply text-light
+    }
+    .project__card__details h3{
+        @apply text-5xl font-bold
+    }
+    .project__card__details button{
+        @apply p-4 text-xl
+        rounded-2xl
+    }
 
+    
 
     .footer__wrapper{
         @apply grid grid-cols-1 gap-8
@@ -227,10 +284,6 @@
     .btn.bg--transparent-alt{
         @apply bg-transparent text-light border-[1px] border-light
         hover:bg-light hover:text-accent hover:border-accent;
-    }
-    .btn.bg--transparent-accent{
-        @apply bg-transparent text-accent border-t-accent border-t-[1px]
-        hover:bg-accent hover:text-light hover:border-accent;
     }
     
     .btn.bg--dark{

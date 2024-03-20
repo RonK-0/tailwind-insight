@@ -5,6 +5,6 @@
 taskkill /F /IM node.exe /T >nul 2>&1
 npm test
 
-timeout /t 300 >nul
+timeout /t 150 >nul
 
 goto loop
