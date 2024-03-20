@@ -24,12 +24,12 @@
         bg-dark lg:bg-transparent z-[999]
         transition-all duration-500;
     }
-    .header .container{
+    /* .header .container{
         @apply py-3 md:py-0;
-    }
+    } */
     .header__wrapper{
         @apply flex items-center justify-between
-        lg:block lg:h-16 lg:mx-auto;
+        lg:block lg:mx-auto;
     }
         
     .branding{
@@ -48,7 +48,7 @@
         z-[999];
     }
     .branding img{
-        @apply w-[5rem] lg:w-[7rem];
+        @apply w-[7rem];
     }
     .branding .header__navd{
         @apply hidden
