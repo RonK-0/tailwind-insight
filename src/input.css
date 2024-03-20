@@ -15,9 +15,9 @@
         /* disable scroll on nav mobile open */
     }
     
-    .header{
+    /* .header{
         @apply bg-dark md:bg-transparent;
-    }
+    } */
     .header .container{
         @apply py-3 md:py-0;
     }
@@ -158,6 +158,18 @@
     }
     .homeBanner__buttons button{
         @apply w-full md:w-[10rem];
+    }
+
+    .footer__wrapper{
+        @apply grid grid-cols-1 gap-8
+        items-center justify-center
+        md:grid-cols-3;
+    }
+    .footer__socials a{
+        @apply text-light text-xl
+        w-8 h-8
+        flex justify-center items-center
+        hover:bg-light;
     }
 
 }
