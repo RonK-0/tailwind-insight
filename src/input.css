@@ -29,7 +29,7 @@
     .branding{
         @apply items-center gap-12
         md:flex md:justify-between
-        md:max-w-[87.5rem] md:w-full
+        md:max-w-[87rem] md:w-full
         md:py-4 md:px-4
         md:bg-transparent;
     }
@@ -47,12 +47,13 @@
     }
     .branding .header__navd{
         @apply hidden
-        md:flex md:gap-4
+        md:flex
         md:-mr-2 /*added to correct right side shifting on scroll*/;
     }
     .branding .header__navd li{
         @apply font-semibold text-lg text-light 
-        py-3 px-2
+        py-3 px-4
+        transition-all duration-150
         hover:text-accent hover:bg-light;
     }
     
@@ -72,25 +73,30 @@
     }
     .header__action .header__navm{
         @apply pb-5 h-fit
-        flex flex-col gap-4
+        flex flex-col
         justify-center items-center
         md:hidden;
     }
     .header__navm li{
-        @apply w-[16rem] h-16 py-2 px-12
+        @apply w-[16rem] h-16 py-6 px-12
         text-light font-bold text-4xl
         flex justify-center items-center
+        transition-all duration-150
         hover:text-accent hover:bg-light;
     }
+    .header__navm li a.active{
+        @apply text-accent;
+    }
     .header__action .header__navm__socials{
-        @apply flex gap-4 text-light
+        @apply flex text-light
         justify-center items-center
         md:hidden;
     }
     .header__action .header__navm__socials li{
-        @apply 
-        w-16 h-16 text-3xl
+        @apply text-3xl
+        w-16 h-16 px-10
         flex justify-center items-center
+        transition-all duration-150
         hover:bg-light;
     }
     
@@ -99,7 +105,8 @@
         md:flex-row-reverse;
     }
     .header__action .header__btn a{
-        @apply flex gap-[1rem] items-center 
+        @apply flex gap-[1rem] items-center
+        transition-all duration-150
         hover:text-accent;
     }
     .header__action .header__kamote{
@@ -147,7 +154,7 @@
         justify-center items-center;
     }
     .homeBanner__wrapper h1{
-        @apply text-center text-light
+        @apply text-center text-light font-semibold
         text-5xl max-w-[30rem]
         sm:text-7xl sm:max-w-[45rem]
         md:text-8xl md:max-w-[55rem];
@@ -159,6 +166,36 @@
     .homeBanner__buttons button{
         @apply w-full md:w-[10rem];
     }
+
+    .services__cards{
+        @apply grid grid-cols-1 gap-12
+        md:grid-cols-3;
+    }
+    .services__card{
+        @apply flex flex-col gap-10
+        justify-center items-center
+        shadow-xl rounded-2xl border-2;
+    }
+    .services__card h3, .services__card p, .services__card ul{
+        @apply px-8;
+    }
+    .services__card h3{
+        @apply text-4xl font-bold pt-6;
+    }
+    .services__card p{
+        @apply text-lg text-justify;
+    }
+    .services__card ul{
+        @apply list-square w-full ml-12;
+    }
+    .services__card li{
+        @apply py-2 text-lg;
+    }
+    .services__card button{
+        @apply w-full flex-grow rounded-none;
+    }
+
+
 
     .footer__wrapper{
         @apply grid grid-cols-1 gap-8
@@ -190,6 +227,10 @@
     .btn.bg--transparent-alt{
         @apply bg-transparent text-light border-[1px] border-light
         hover:bg-light hover:text-accent hover:border-accent;
+    }
+    .btn.bg--transparent-accent{
+        @apply bg-transparent text-accent border-t-accent border-t-[1px]
+        hover:bg-accent hover:text-light hover:border-accent;
     }
     
     .btn.bg--dark{

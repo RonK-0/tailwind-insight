@@ -24,7 +24,7 @@
                     </div>
                     <div class="header__action">
                         <ul class="header__navm">
-                            <li><a href="./home.html">Home</a></li>
+                            <li><a href="./home.html" class="active">Home</a></li>
                             <li><a href="">Services</a></li>
                             <li><a href="">Projects</a></li>
                             <li><a href="">Contacts</a></li>
@@ -56,19 +56,67 @@
         </div>
     </section>
     
-
+    <!-- section.services.py-12>.container>.services__wrapper>({.services__label>h2.font-bold.text-accent.text-2xl{Services}+p{Lorem ipsum dolor sit, amet consectetur adipisicining.}}+(.services__cards>.services__card*3>h3{E-Design}+p{lorem21}+(ul>li*5{Lorem ipsum dolor sit amet.})+button.btn.bg--transparent-accent{More Details})) -->
+    <section class="services py-28">
+        <div class="container">
+            <div class="services__wrapper">
+                <div class="services__label mb-8 flex flex-col gap-4">
+                    <h2 class="font-black text-accent text-4xl md:text-5xl">Services</h2>
+                    <p class="text-base md:text-xl">Lorem ipsum dolor sit, amet consectetur adipisicining.</p>
+                </div>
+                <div class="services__cards">
+                    <div class="services__card">
+                        <h3>E-Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias eveniet iste ipsam laborum consectetur odit autem necessitatibus nisi maxime.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <button class="btn bg--transparent-accent">More Details</button>
+                    </div>
+                    <div class="services__card">
+                        <h3>Full Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias eveniet iste ipsam laborum consectetur odit autem necessitatibus nisi maxime.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <button class="btn bg--transparent-accent">More Details</button>
+                    </div>
+                    <div class="services__card">
+                        <h3>Ala Carte</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias eveniet iste ipsam laborum consectetur odit autem necessitatibus nisi maxime.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <button class="btn bg--transparent-accent">More Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
     <footer class="footer bg-gray-400 py-8 md:py-12">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer__socials flex flex-wrap gap-3 justify-center items-center md:justify-normal md:order-first">
+                <div class="footer__socials flex flex-wrap gap-3 justify-center items-center md:justify-normal order-2 md:order-first">
                     <a href="#" class="hover:text-mail"><i class="fas fa-envelope"></i></a>
                     <a href="#" class="hover:text-dark"><i class="fab fa-slack"></i></a>
                     <a href="#" class="hover:text-facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="hover:text-twitter"><i class="fab fa-twitter"></i></a>
                 </div>
-                <a href="./home.html" class="mx-auto -order-1 md:order-0"><img src="./img/logo.png" alt="Insight Logo"></a>
+                <a href="./home.html" class="mx-auto"><img src="./img/logo.png" alt="Insight Logo"></a>
                 <h4 class="text-light text-lg font-medium text-center md:text-right">All rights reserved.</h4>
             </div>
         </div>

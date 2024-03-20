@@ -18,6 +18,13 @@ module.exports = {
       },
       fontFamily:{
         
+      },
+      listStyleType: {
+        none: 'none',
+        disc: 'disc',
+        decimal: 'decimal',
+        square: 'square',
+        roman: 'upper-roman',
       }
     },
   },
