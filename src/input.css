@@ -14,12 +14,14 @@
         @apply overflow-hidden;
         /* disable scroll on nav mobile open */
     }
+
+    /* START OF HEADER */
     .header{
         @apply transition-all duration-500
     }
     .header.scroll{
         @apply fixed w-full lg:static
-        bg-dark z-[999] 
+        bg-dark md:bg-transparent z-[999]
         transition-all duration-500;
     }
     .header .container{
@@ -29,8 +31,7 @@
         @apply flex items-center justify-between
         lg:block lg:h-16 lg:mx-auto;
     }
-    
-    
+        
     .branding{
         @apply items-center gap-12
         lg:flex lg:justify-between
@@ -146,6 +147,7 @@
         transition-all duration-300;
     }
 
+    /* START OF BANNER */
     .homeBanner{
         @apply h-[100vh] 
         bg-bannah bg-cover bg-center;
@@ -169,6 +171,7 @@
         @apply w-full md:w-[10rem];
     }
 
+    /* START OF SERVICES */
     .services__cards{
         @apply grid grid-cols-1 gap-12
         lg:grid-cols-3;
@@ -204,6 +207,7 @@
         w-full flex-grow rounded-none;
     }
 
+    /* START OF PROJECTS */
     .project__card{
         @apply relative
         /* h-1/2 md:h-full overflow-clip */
@@ -253,6 +257,7 @@
         rounded-2xl
     }
 
+    /* START OF CONTACTS */
     .contacts{
         @apply md:h-[800px];
     }
@@ -284,8 +289,7 @@
         @apply text-xl px-4
     }
 
-    
-
+    /* START OF FOOTER */
     .footer__wrapper{
         @apply grid grid-cols-1 gap-8
         items-center justify-center
@@ -297,7 +301,6 @@
         flex justify-center items-center
         hover:bg-light;
     }
-
 }
 
 @layer utilities{

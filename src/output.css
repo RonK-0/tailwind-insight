@@ -583,6 +583,8 @@ body.open {
   /* disable scroll on nav mobile open */
 }
 
+/* START OF HEADER */
+
 .header {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -598,6 +600,12 @@ body.open {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
+}
+
+@media (min-width: 768px) {
+  .header.scroll {
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -938,6 +946,8 @@ body.open {
   transition-duration: 300ms;
 }
 
+/* START OF BANNER */
+
 .homeBanner {
   height: 100vh;
   background-image: url('../dist/img/banner-img.png');
@@ -1006,6 +1016,8 @@ body.open {
     width: 10rem;
   }
 }
+
+/* START OF SERVICES */
 
 .services__cards {
   display: grid;
@@ -1090,6 +1102,8 @@ body.open {
   --tw-text-opacity: 1;
   color: rgb(251 77 60 / var(--tw-text-opacity));
 }
+
+/* START OF PROJECTS */
 
 .project__card {
   position: relative;
@@ -1249,7 +1263,11 @@ body.open {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+}
 
+/* START OF CONTACTS */
+
+@media (min-width: 768px) {
   .contacts {
     height: 800px;
   }
@@ -1330,6 +1348,8 @@ body.open {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+
+/* START OF FOOTER */
 
 .footer__wrapper {
   display: grid;
