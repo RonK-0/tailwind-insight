@@ -23,32 +23,29 @@
     }
     .header__wrapper{
         @apply flex items-center justify-between
-        md:block md:h-16 md:mx-auto;
+        lg:block lg:h-16 lg:mx-auto;
     }
     
     .branding{
         @apply items-center gap-12
-        md:flex md:justify-between
-        md:max-w-[87rem] md:w-full
-        md:py-4 md:px-4
-        md:bg-transparent;
+        lg:flex lg:justify-between
+        lg:max-w-[87rem] lg:w-full
+        lg:py-4 lg:px-4
+        lg:bg-transparent;
     }
     .branding.scroll{
-        @apply md:bg-dark
-        md:fixed md:rounded-lg
-        md:px-4 md:my-6
-        transition-all duration-500;
-    }
-    .branding.scroll .header__navd{
-        @apply md:mr-0; /*added to correct right side shifting on scroll*/
+        @apply lg:bg-dark
+        lg:fixed lg:rounded-lg
+        lg:px-4 lg:my-6
+        transition-all duration-500
+        z-[999];
     }
     .branding img{
-        @apply w-[5rem] md:w-[7rem];
+        @apply w-[5rem] lg:w-[7rem];
     }
     .branding .header__navd{
         @apply hidden
-        md:flex
-        md:-mr-2 /*added to correct right side shifting on scroll*/;
+        lg:flex
     }
     .branding .header__navd li{
         @apply font-semibold text-lg text-light 
@@ -62,7 +59,7 @@
         w-0 h-[100vh] px-0 pt-0 
         absolute top-0 right-0
         overflow-hidden transition-all
-        md:static md:h-fit md:w-fit;
+        lg:static lg:h-fit lg:w-fit;
     }
     .header__action.open{
         @apply w-full h-[100vh] px-10 pt-10
@@ -75,7 +72,7 @@
         @apply pb-5 h-fit
         flex flex-col
         justify-center items-center
-        md:hidden;
+        lg:hidden;
     }
     .header__navm li{
         @apply w-[16rem] h-16 py-6 px-12
@@ -90,7 +87,7 @@
     .header__action .header__navm__socials{
         @apply flex text-light
         justify-center items-center
-        md:hidden;
+        lg:hidden;
     }
     .header__action .header__navm__socials li{
         @apply text-3xl
@@ -102,7 +99,7 @@
     
     .header__action .header__btn{
         @apply pt-5 flex flex-col gap-3 
-        md:flex-row-reverse;
+        lg:flex-row-reverse;
     }
     .header__action .header__btn a{
         @apply flex gap-[1rem] items-center
@@ -115,7 +112,7 @@
         
     .burger__menu{
         @apply flex flex-col items-end
-        md:hidden;
+        lg:hidden;
     }
     .burger__menu span{
         @apply w-[1.5rem] h-[0.3rem] bg-light
@@ -169,7 +166,7 @@
 
     .services__cards{
         @apply grid grid-cols-1 gap-12
-        md:grid-cols-3;
+        lg:grid-cols-3;
     }
     .services__card{
         @apply flex flex-col gap-10
@@ -203,43 +200,35 @@
     }
 
     .project__card{
-        @apply relative;
+        @apply relative
+        h-1/2 md:h-full 
+        flex justify-center items-center;
     }
-    .project__card:before{
+    .project__card::before{
         @apply 
         w-[100%] h-[100%]
         absolute top-0 left-0
         content-['']
         md:bg-black md:opacity-60
-        z-10
-        transition-all;
+        transition-all duration-500;
     }
-    .project__card:hover+.project__card:before{
-        @apply opacity-0 h-0 w-0;
-        /* broken rn */
+    .project__card:hover::before{
+        @apply scale-0;
     }
     .project__card img{
         @apply w-full object-cover;
     }
     .project__card__details{
-        @apply mx-8 px-6 py-8
-        opacity-0
-        flex flex-col gap-12
+        @apply mx-4 p-4 my-auto
+        bg-black/60
+        md:mx-8 lg:p-8
+        opacity-100 md:opacity-0
+        flex flex-col gap-6 xl:gap-12
         justify-center items-center
         absolute top-0 left-0
-        transform translate-y-[50%]
-        transition-all duration-200
-    }
-    .project__card:hover+.project__card__details{
-        @apply opacity-100
-    }
-    .project__card .project__card__details:before{
-        @apply w-full h-full
-        absolute top-[50%] left-0
-        content-['']
-        -z-10
-        transform -translate-y-1/2
-        bg-black opacity-60
+        transform translate-y-[0%] 
+        md:translate-y-[25%] lg:translate-y-[45%] xl:translate-y-[50%]
+        transition-all duration-500
     }
     .project__card:hover .project__card__details{
         @apply opacity-100;
@@ -248,10 +237,13 @@
         @apply text-light
     }
     .project__card__details h3{
-        @apply text-5xl font-bold
+        @apply font-bold md:text-base xl:text-4xl
+    }
+    .project__card__details p{
+        @apply md:text-xs xl:text-base
     }
     .project__card__details button{
-        @apply p-4 text-xl
+        @apply p-4 text-xl md:text-sm
         rounded-2xl
     }
 
