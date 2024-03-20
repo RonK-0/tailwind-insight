@@ -199,7 +199,6 @@
     .services__card button{
         @apply bg-transparent text-accent 
         border-t-accent border-t-[1px]
-        
         w-full flex-grow rounded-none;
     }
 
@@ -217,18 +216,22 @@
     }
     .project__card:hover+.project__card:before{
         @apply opacity-0 h-0 w-0;
+        /* broken rn */
     }
     .project__card img{
         @apply w-full object-cover;
     }
-    .project__card .project__card__details{
-        @apply  mx-8 px-6 py-8
-        /* opacity-0 */
+    .project__card__details{
+        @apply mx-8 px-6 py-8
+        opacity-0
         flex flex-col gap-12
         justify-center items-center
         absolute top-0 left-0
         transform translate-y-[50%]
         transition-all duration-200
+    }
+    .project__card:hover+.project__card__details{
+        @apply opacity-100
     }
     .project__card .project__card__details:before{
         @apply w-full h-full

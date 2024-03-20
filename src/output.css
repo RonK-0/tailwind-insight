@@ -1110,6 +1110,7 @@ body.open {
   height: 0px;
   width: 0px;
   opacity: 0;
+  /* broken rn */
 }
 
 .project__card img {
@@ -1118,7 +1119,7 @@ body.open {
      object-fit: cover;
 }
 
-.project__card .project__card__details {
+.project__card__details {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1135,9 +1136,14 @@ body.open {
   padding-right: 1.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  opacity: 0;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
+}
+
+.project__card:hover+.project__card__details {
+  opacity: 1;
 }
 
 .project__card .project__card__details:before {
