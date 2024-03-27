@@ -1,15 +1,28 @@
-window.onscroll = function() {
+// window.onscroll = function() {
+//     var navd = document.getElementById('navd');
+//     var navm = document.getElementById('header');
+//     if ( window.scrollY > 0 ) {
+//         navd.classList.add("scroll");
+//         navm.classList.add("scroll");
+//     }
+//     else {
+//         navd.classList.remove("scroll");
+//         navm.classList.remove("scroll");
+//     }
+// }
+
+// alt solution
+window.onscroll = ("scroll", ()=>{
     var navd = document.getElementById('navd');
     var navm = document.getElementById('header');
     if ( window.scrollY > 0 ) {
         navd.classList.add("scroll");
         navm.classList.add("scroll");
-    }
-    else {
+    } else {
         navd.classList.remove("scroll");
         navm.classList.remove("scroll");
     }
-}
+});
 
 const burgir = document.querySelector(".burger__menu");
 const headerA = document.querySelector(".header__action");
@@ -19,6 +32,18 @@ burgir.addEventListener("click", ()=>{
     headerA.classList.toggle("open");
     bodih.classList.toggle("open");
 });
+
+
+// Sir Ansbert solution for floaing header
+// const header = document.querySelector(".header");
+// window.console.log(scrollY);
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY >= 100) {
+//     header.classList.add("dark");
+//   } else {
+//     header.classList.remove("dark");
+//   }
+// });
 
 // const links = document.querySelectorAll(".links__item h4");
 // links.forEach((link) => {
