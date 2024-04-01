@@ -586,15 +586,15 @@ body.open {
 /* START OF HEADER */
 
 .header {
+  position: fixed;
+  width: 100%;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
 
 .header.scroll {
-  position: fixed;
   z-index: 999;
-  width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(43 43 43 / var(--tw-bg-opacity));
   transition-property: all;
@@ -604,7 +604,6 @@ body.open {
 
 @media (min-width: 1024px) {
   .header.scroll {
-    position: static;
     background-color: transparent;
   }
 }

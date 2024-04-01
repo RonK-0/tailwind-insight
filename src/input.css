@@ -18,9 +18,10 @@
     /* START OF HEADER */
     .header{
         @apply transition-all duration-500
+        fixed w-full
     }
     .header.scroll{
-        @apply fixed w-full lg:static
+        @apply 
         bg-dark lg:bg-transparent z-[999]
         transition-all duration-500;
     }
